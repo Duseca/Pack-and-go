@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:pack_and_go/generated/assets.dart';
 import 'package:pack_and_go/main.dart';
 import 'package:pack_and_go/view/widgets/common_image_view_widget.dart';
@@ -36,9 +37,17 @@ class ProfileTile extends StatelessWidget {
             ],
           ),
         ),
-        CommonImageView(
-          imagePath: Assets.imagesBadge,
-          height: 50,
+        Animate(
+          effects: [
+            ShakeEffect(
+              duration: Duration(milliseconds: 200),
+            ),
+            ScaleEffect()
+          ],
+          child: CommonImageView(
+            imagePath: Assets.imagesBadge,
+            height: 50,
+          ),
         )
       ],
     );

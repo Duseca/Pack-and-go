@@ -113,6 +113,7 @@ class Chats extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
                     return ChatHeads(
+                      isread: index == 0 ? true : false,
                       duration: 100 + (index * 200),
                     );
                   },

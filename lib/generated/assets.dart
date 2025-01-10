@@ -98,6 +98,18 @@ class Assets {
   /// assets/images/calendar.png
   static const String imagesCalendar = "assets/images/calendar.png";
 
+  /// Assets for imagesCancell
+  /// assets/images/cancell.png
+  static const String imagesCancell = "assets/images/cancell.png";
+
+  /// Assets for imagesCopy
+  /// assets/images/copy.png
+  static const String imagesCopy = "assets/images/copy.png";
+
+  /// Assets for imagesDoubletick
+  /// assets/images/doubletick.png
+  static const String imagesDoubletick = "assets/images/doubletick.png";
+
   /// Assets for imagesEye
   /// assets/images/eye.png
   static const String imagesEye = "assets/images/eye.png";
@@ -142,6 +154,10 @@ class Assets {
   /// assets/images/mail.png
   static const String imagesMail = "assets/images/mail.png";
 
+  /// Assets for imagesMessage
+  /// assets/images/message.png
+  static const String imagesMessage = "assets/images/message.png";
+
   /// Assets for imagesNext
   /// assets/images/next.png
   static const String imagesNext = "assets/images/next.png";
@@ -178,6 +194,14 @@ class Assets {
   /// assets/images/proson.png
   static const String imagesProson = "assets/images/proson.png";
 
+  /// Assets for imagesPublish
+  /// assets/images/publish.png
+  static const String imagesPublish = "assets/images/publish.png";
+
+  /// Assets for imagesReview
+  /// assets/images/review.png
+  static const String imagesReview = "assets/images/review.png";
+
   /// Assets for imagesRight
   /// assets/images/right.png
   static const String imagesRight = "assets/images/right.png";
@@ -197,6 +221,10 @@ class Assets {
   /// Assets for imagesSearchunselected
   /// assets/images/searchunselected.png
   static const String imagesSearchunselected = "assets/images/searchunselected.png";
+
+  /// Assets for imagesSend
+  /// assets/images/send.png
+  static const String imagesSend = "assets/images/send.png";
 
   /// Assets for imagesStar
   /// assets/images/star.png

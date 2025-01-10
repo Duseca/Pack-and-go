@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:pack_and_go/view/screens/history/all.dart';
-import 'package:pack_and_go/view/widgets/tabs_widget.dart';
+import 'package:pack_and_go/view/screens/history/all_requests.dart';
 
-class MyBookings extends StatefulWidget {
-  const MyBookings({super.key});
+import '../../widgets/tabs_widget.dart';
+
+class MyRequestsHistory extends StatefulWidget {
+  const MyRequestsHistory({super.key});
 
   @override
-  State<MyBookings> createState() => _MyBookingsState();
+  State<MyRequestsHistory> createState() => _MyRequestsHistoryState();
 }
 
 final List<String> _tabs = ['All', 'On Going', 'Cacelled', 'Completed'];
 int _currentIndex = 0;
 final List<Widget> tabBarView = [
-  All(),
-  All(),
-  All(),
-  All(),
+  AllRequests(),
+  Container(),
+  Container(),
+  Container()
 ];
 
-class _MyBookingsState extends State<MyBookings> {
+class _MyRequestsHistoryState extends State<MyRequestsHistory> {
   void _onTap(int index) {
     setState(() {
       _currentIndex = index;

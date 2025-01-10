@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:pack_and_go/constants/app_colors.dart';
 import 'package:pack_and_go/constants/app_styling.dart';
 import 'package:pack_and_go/view/screens/history/my_bookings.dart';
+import 'package:pack_and_go/view/screens/history/my_requests_history.dart';
 import 'package:pack_and_go/view/widgets/my_text_widget.dart';
 import 'package:pack_and_go/view/widgets/simple_app_bar.dart';
 
@@ -25,7 +26,7 @@ class _HistoryState extends State<History> {
   final List<String> _tabs = ['My Bookings', 'My Requests'];
   final List<Widget> tabBarView = [
     MyBookings(),
-    Container(),
+    MyRequestsHistory(),
   ];
   @override
   Widget build(BuildContext context) {

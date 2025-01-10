@@ -1,11 +1,13 @@
 import 'package:entry/entry.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bounce/flutter_bounce.dart';
 import 'package:get/get.dart';
 import 'package:pack_and_go/constants/app_colors.dart';
 
 import 'package:pack_and_go/constants/app_styling.dart';
 import 'package:pack_and_go/generated/assets.dart';
-import 'package:pack_and_go/view/screens/home/search_results.dart';
+import 'package:pack_and_go/view/screens/home/notifications.dart';
+import 'package:pack_and_go/view/screens/home/results/search_results.dart';
 import 'package:pack_and_go/view/widgets/common_image_view_widget.dart';
 import 'package:pack_and_go/view/widgets/my_button.dart';
 import 'package:pack_and_go/view/widgets/my_text_field.dart';
@@ -31,9 +33,15 @@ class Home extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               homeAppBar(actions: [
-                CommonImageView(
-                  imagePath: Assets.imagesNotification,
-                  height: 24,
+                Bounce(
+                  duration: Duration(milliseconds: 200),
+                  onPressed: () {
+                    Get.to(() => Notifications());
+                  },
+                  child: CommonImageView(
+                    imagePath: Assets.imagesNotification,
+                    height: 24,
+                  ),
                 ),
                 SizedBox(
                   width: 20,

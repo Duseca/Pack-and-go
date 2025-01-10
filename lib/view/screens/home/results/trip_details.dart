@@ -13,7 +13,7 @@ class TripDetails extends StatelessWidget {
           Expanded(
             child: ListView(
               shrinkWrap: true,
-              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 0),
+              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
               physics: const BouncingScrollPhysics(),
               children: [
                 TwoTextedColumn(

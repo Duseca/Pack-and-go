@@ -6,7 +6,6 @@ import 'package:pack_and_go/constants/app_styling.dart';
 import 'package:pack_and_go/generated/assets.dart';
 import 'package:pack_and_go/view/widgets/Icon_title_subtitle.dart';
 import 'package:pack_and_go/view/widgets/common_image_view_widget.dart';
-import 'package:pack_and_go/view/widgets/my_button.dart';
 import 'package:pack_and_go/view/widgets/my_text_widget.dart';
 import 'package:pack_and_go/view/widgets/two_text_column.dart';
 

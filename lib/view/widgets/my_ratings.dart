@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pack_and_go/constants/app_colors.dart';
+import 'package:pack_and_go/generated/assets.dart';
+import 'package:pack_and_go/view/widgets/common_image_view_widget.dart';
+import 'package:pack_and_go/view/widgets/custom_animated_row.dart';
+import 'package:pack_and_go/view/widgets/my_text_widget.dart';
 
 class StarRating extends StatelessWidget {
   final double rating;
@@ -41,5 +45,20 @@ class StarRating extends StatelessWidget {
         }
       }),
     );
+  }
+}
+
+class RatingText extends StatelessWidget {
+  const RatingText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedRow(children: [
+      CommonImageView(
+        imagePath: Assets.imagesStar,
+        height: 16,
+      ),
+      MyText(text: ' 5.0')
+    ]);
   }
 }
