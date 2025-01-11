@@ -102,9 +102,25 @@ class Assets {
   /// assets/images/cancell.png
   static const String imagesCancell = "assets/images/cancell.png";
 
+  /// Assets for imagesCeltiis
+  /// assets/images/celtiis.png
+  static const String imagesCeltiis = "assets/images/celtiis.png";
+
+  /// Assets for imagesCloud
+  /// assets/images/cloud.png
+  static const String imagesCloud = "assets/images/cloud.png";
+
   /// Assets for imagesCopy
   /// assets/images/copy.png
   static const String imagesCopy = "assets/images/copy.png";
+
+  /// Assets for imagesCredit
+  /// assets/images/credit.png
+  static const String imagesCredit = "assets/images/credit.png";
+
+  /// Assets for imagesDate
+  /// assets/images/date.png
+  static const String imagesDate = "assets/images/date.png";
 
   /// Assets for imagesDoubletick
   /// assets/images/doubletick.png
@@ -158,6 +174,14 @@ class Assets {
   /// assets/images/message.png
   static const String imagesMessage = "assets/images/message.png";
 
+  /// Assets for imagesMoov
+  /// assets/images/moov.png
+  static const String imagesMoov = "assets/images/moov.png";
+
+  /// Assets for imagesMtn
+  /// assets/images/mtn.png
+  static const String imagesMtn = "assets/images/mtn.png";
+
   /// Assets for imagesNext
   /// assets/images/next.png
   static const String imagesNext = "assets/images/next.png";
@@ -177,6 +201,10 @@ class Assets {
   /// Assets for imagesOnline
   /// assets/images/online.png
   static const String imagesOnline = "assets/images/online.png";
+
+  /// Assets for imagesPackege
+  /// assets/images/packege.png
+  static const String imagesPackege = "assets/images/packege.png";
 
   /// Assets for imagesPhone
   /// assets/images/phone.png
@@ -233,5 +261,17 @@ class Assets {
   /// Assets for imagesSuccess
   /// assets/images/success.png
   static const String imagesSuccess = "assets/images/success.png";
+
+  /// Assets for imagesTime
+  /// assets/images/time.png
+  static const String imagesTime = "assets/images/time.png";
+
+  /// Assets for imagesTravel
+  /// assets/images/travel.png
+  static const String imagesTravel = "assets/images/travel.png";
+
+  /// Assets for imagesVisa
+  /// assets/images/visa.png
+  static const String imagesVisa = "assets/images/visa.png";
 }
 

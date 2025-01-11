@@ -10,6 +10,7 @@ class MyTextField extends StatefulWidget {
     Key? key,
     this.controller,
     this.hint,
+    this.isDense,
     this.label,
     this.onChanged,
     this.isObSecure = false,
@@ -22,6 +23,7 @@ class MyTextField extends StatefulWidget {
     this.hintColor,
     this.bordercolor,
     this.isright,
+    this.padends,
     this.radius = 10,
     this.haveLabel = true,
     this.labelSize,
@@ -49,13 +51,14 @@ class MyTextField extends StatefulWidget {
       isoptional,
       haveLabel,
       isFilled,
+      isDense,
       isright,
       useCountryCodePicker,
       showFlag,
       useOutlinedBorder; // Added this flag for choosing border style
   double? marginBottom;
   int? maxLines;
-  double? labelSize, radius;
+  double? labelSize, radius, padends;
   Widget? suffixIcon;
   Widget? prefixIcon;
   Color? filledColor,
@@ -115,7 +118,7 @@ class _MyTextFieldState extends State<MyTextField> {
                       MyText(
                         text: widget.label ?? '',
                         size: widget.labelSize ?? 14,
-                        paddingBottom: 8,
+                        paddingBottom: widget.padends ?? 8,
                         weight: widget.labelWeight ?? FontWeight.w400,
                         color: isFocused
                             ? widget.focusedLabelColor ?? kBlack2Color
@@ -163,12 +166,13 @@ class _MyTextFieldState extends State<MyTextField> {
                       widget.isright == true ? TextAlign.right : TextAlign.left,
                   focusNode: _focusNode,
                   decoration: InputDecoration(
+                    isDense: widget.isDense,
                     prefixIcon:
                         widget.prefixIcon != null ? widget.prefixIcon : null,
                     floatingLabelAlignment: FloatingLabelAlignment.start,
                     floatingLabelBehavior: FloatingLabelBehavior.never,
-                    contentPadding:
-                        const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    contentPadding: EdgeInsets.symmetric(
+                        horizontal: widget.padends ?? 15, vertical: 5),
                     hintText: widget.hint,
                     suffixIcon: widget.suffixIcon != null
                         ? GestureDetector(

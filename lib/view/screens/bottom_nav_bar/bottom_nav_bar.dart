@@ -2,10 +2,12 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:pack_and_go/constants/app_colors.dart';
 import 'package:pack_and_go/constants/app_fonts.dart';
 import 'package:pack_and_go/generated/assets.dart';
+import 'package:pack_and_go/view/screens/add/publish.dart';
 import 'package:pack_and_go/view/screens/chats/chats.dart';
 import 'package:pack_and_go/view/screens/history/history.dart';
 import 'package:pack_and_go/view/screens/home/home.dart';
@@ -19,7 +21,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   late List<Map<String, dynamic>> items;
-  int currentIndex = 1;
+  int currentIndex = 0;
 
   @override
   void initState() {
@@ -85,11 +87,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           onTap: (index) {
-            setState(() {
-              currentIndex = index;
-              log(currentIndex.toString());
-              updateItems(); // Update items when index changes
-            });
+            if (index == 1) {
+              Get.to(() => Publish());
+            } else
+              setState(() {
+                currentIndex = index;
+                log(currentIndex.toString());
+                updateItems(); // Update items when index changes
+              });
           },
           type: BottomNavigationBarType.fixed,
           currentIndex: currentIndex,

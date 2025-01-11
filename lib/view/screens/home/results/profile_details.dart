@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pack_and_go/constants/app_colors.dart';
 import 'package:pack_and_go/constants/app_sizes.dart';
 import 'package:pack_and_go/constants/app_styling.dart';
+import 'package:pack_and_go/view/screens/home/booking/book_traveler.dart';
 import 'package:pack_and_go/view/screens/home/results/trip_details.dart';
 import 'package:pack_and_go/view/screens/home/results/user_details.dart';
 import 'package:pack_and_go/view/widgets/my_button.dart';
@@ -113,7 +115,9 @@ class _ProfileDetailsState extends State<ProfileDetails> {
             mBottom: 20,
           ),
           MyButton(
-            onTap: () {},
+            onTap: () {
+              Get.to(() => BookTraveler());
+            },
             buttonText: 'Book Traveler',
             mhoriz: 20,
             mBottom: 20,
