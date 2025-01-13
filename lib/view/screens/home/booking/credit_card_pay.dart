@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pack_and_go/constants/app_colors.dart';
 import 'package:pack_and_go/constants/app_styling.dart';
 import 'package:pack_and_go/generated/assets.dart';
+import 'package:pack_and_go/view/screens/home/booking/otp_confirmation.dart';
 import 'package:pack_and_go/view/widgets/common_image_view_widget.dart';
 import 'package:pack_and_go/view/widgets/custom_animated_row.dart';
 import 'package:pack_and_go/view/widgets/my_button.dart';
 import 'package:pack_and_go/view/widgets/my_text_field.dart';
-import 'package:pack_and_go/view/widgets/my_text_widget.dart';
 import 'package:pack_and_go/view/widgets/simple_app_bar.dart';
 import 'package:pack_and_go/view/widgets/two_text_column.dart';
 
@@ -129,7 +130,7 @@ class CreditCardPay extends StatelessWidget {
           ),
           MyButton(
             onTap: () {
-              //   Get.to(() => Payment());
+              Get.to(() => OtpConfirmation());
             },
             buttonText: 'Continue',
             mhoriz: 20,

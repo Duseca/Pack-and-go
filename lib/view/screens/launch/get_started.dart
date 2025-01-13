@@ -134,8 +134,8 @@ class SimpleExample extends StatelessWidget {
     this.stretchThumb = false,
     this.resetCurve = Curves.easeOut,
     this.resetDuration = const Duration(milliseconds: 400),
-    this.thumbWidth = 200,
-    this.trackHeight = 64,
+    this.thumbWidth = 80,
+    this.trackHeight = 54,
     Key? key,
   }) : super(key: key);
 
@@ -159,22 +159,15 @@ class SimpleExample extends StatelessWidget {
       trackBuilder: (context, state) {
         return Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: kSecondaryColor.withOpacity(0.1),
-            ),
+                borderRadius: BorderRadius.circular(10), gradient: bggrad()),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Transform.rotate(
-                //   angle: 1.6,
-                //   child: Image.asset(
-                //     Assets.imagesGifbgtrans,
-                //     color: kTertiaryColor.withOpacity(0.6),
-                //     width: 150,
-                //     height: 80,
-                //     fit: BoxFit.cover,
-                //   ),
-                // )
+                MyText(
+                  paddingLeft: 30,
+                  text: 'Swipe to Get Started',
+                  color: kPrimaryColor,
+                )
               ],
             ));
       },
@@ -182,30 +175,50 @@ class SimpleExample extends StatelessWidget {
         return Container(
           margin: const EdgeInsets.all(7),
           decoration: BoxDecoration(
-            color: kSecondaryColor.withOpacity(0.0),
-            borderRadius: BorderRadius.circular(10),
+            gradient: bggrad(),
+            borderRadius: BorderRadius.circular(13),
           ),
           child: Align(
             alignment: Alignment.centerRight,
             child: SizedBox(
-              width: stretchThumb ? 200 : double.infinity,
+              width: stretchThumb ? 100 : double.infinity,
               child: Center(
                 child: SizedBox(
                   width: 200,
                   child: Container(
                     width: 200,
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(7),
                     decoration: BoxDecoration(
-                      color: kSecondaryColor,
+                      color: Color(0xff1FD9FF),
 
                       ///  shape: BoxShape.circle,
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
-                        child: MyText(
-                      text: 'Get Started',
-                      weight: FontWeight.w600,
-                      color: kPrimaryColor,
+                        child: ShaderMask(
+                      shaderCallback: (bounds) {
+                        return LinearGradient(
+                          colors: [
+                            const Color.fromARGB(255, 255, 255, 255)
+                                .withOpacity(0.4), // Start color
+                            const Color.fromARGB(255, 157, 41, 41)
+                                .withOpacity(0.1), // End color
+                          ],
+                          tileMode: TileMode.clamp,
+                        ).createShader(bounds);
+                      },
+                      child: Transform.flip(
+                        flipX: true,
+                        child: Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Image.asset(
+                            Assets.imagesGifbgtrans,
+                            width: 150,
+                            height: 60,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
                     )),
                   ),
                 ),

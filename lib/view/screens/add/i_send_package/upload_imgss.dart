@@ -22,41 +22,53 @@ class UploadImgss extends StatelessWidget {
           size1: 20,
           weight1: FontWeight.w600,
         ),
-        DottedBorder(
-          borderType: BorderType.RRect,
-          radius: const Radius.circular(8),
-          dashPattern: [3, 3, 3],
+        UploadTile()
+      ],
+    );
+  }
+}
+
+class UploadTile extends StatelessWidget {
+  const UploadTile({super.key, this.title, this.height, this.size, this.color});
+  final String? title;
+  final double? height, size;
+  final Color? color;
+  @override
+  Widget build(BuildContext context) {
+    return DottedBorder(
+      borderType: BorderType.RRect,
+      radius: const Radius.circular(8),
+      dashPattern: [3, 3, 3],
+      padding: const EdgeInsets.all(0),
+      color: kGrey5Color.withOpacity(0.7),
+      child: ClipRRect(
+        borderRadius: const BorderRadius.all(Radius.circular(8)),
+        child: Container(
           padding: const EdgeInsets.all(0),
-          color: kGrey5Color.withOpacity(0.7),
-          child: ClipRRect(
-            borderRadius: const BorderRadius.all(Radius.circular(8)),
-            child: Container(
-              padding: const EdgeInsets.all(0),
-              color: kPrimaryColor,
+          color: kPrimaryColor,
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Center(
               child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(29.0),
-                    child: Column(
-                      children: [
-                        CommonImageView(
-                          imagePath: Assets.imagesCloud,
-                          height: 30,
-                        ),
-                        MyText(
-                          text: 'Upload Here',
-                          color: kSecondaryColor,
-                        )
-                      ],
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  children: [
+                    CommonImageView(
+                      imagePath: Assets.imagesCloud,
+                      height: height ?? 30,
                     ),
-                  ),
+                    MyText(
+                      text: title ?? 'Upload Here',
+                      color: color ?? kSecondaryColor,
+                      size: size ?? null,
+                    )
+                  ],
                 ),
               ),
             ),
           ),
         ),
-      ],
+      ),
     );
   }
 }

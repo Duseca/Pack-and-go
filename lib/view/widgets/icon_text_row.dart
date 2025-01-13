@@ -14,18 +14,25 @@ class IconTextRow extends StatelessWidget {
       this.padends,
       this.textsize,
       this.iconsize,
-      this.crossAxisAlignment});
+      this.crossAxisAlignment,
+      this.mainAxisAlignment});
   final String? iconpath, text;
   final Color? textcolor, iconcolor;
   final double? padends, textsize, iconsize;
   final CrossAxisAlignment? crossAxisAlignment;
+  final MainAxisAlignment? mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: padends ?? 0),
       child: AnimatedRow(
+        mainAxisAlignment: mainAxisAlignment ?? MainAxisAlignment.start,
         crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
         children: [
+          if (mainAxisAlignment == MainAxisAlignment.end)
+            Expanded(
+              child: SizedBox(),
+            ),
           Image.asset(
             color: iconcolor ?? null,
             iconpath ?? Assets.imagesOnline,

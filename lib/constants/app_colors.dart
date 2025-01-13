@@ -110,6 +110,17 @@ LinearGradient bggrad() => LinearGradient(
         // Adjust stops to control color portions
         begin: Alignment.centerRight,
         end: Alignment.centerLeft);
+LinearGradient LIGHTBLUE() => LinearGradient(
+        colors: [
+          Color(0xffCBF6FF),
+          Color(0xff95D4FF),
+
+          // End color
+        ],
+
+        // Adjust stops to control color portions
+        begin: Alignment.centerRight,
+        end: Alignment.centerLeft);
 LinearGradient bggradOpacity() => LinearGradient(
         colors: [
           Color(0xff1FD9FF).withOpacity(0.6),

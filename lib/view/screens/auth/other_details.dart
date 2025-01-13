@@ -3,8 +3,10 @@ import 'package:get/get.dart';
 import 'package:pack_and_go/constants/app_colors.dart';
 import 'package:pack_and_go/constants/app_styling.dart';
 import 'package:pack_and_go/generated/assets.dart';
+import 'package:pack_and_go/view/screens/add/i_send_package/upload_imgss.dart';
 import 'package:pack_and_go/view/screens/auth/set_password.dart';
 import 'package:pack_and_go/view/widgets/common_image_view_widget.dart';
+import 'package:pack_and_go/view/widgets/custom_animated_row.dart';
 import 'package:pack_and_go/view/widgets/custom_drop_down.dart';
 import 'package:pack_and_go/view/widgets/my_button.dart';
 import 'package:pack_and_go/view/widgets/my_text_field.dart';
@@ -97,7 +99,34 @@ class OtherDetails extends StatelessWidget {
                         ),
                       ),
                       hint: 'Phone number',
-                      marginBottom: 40,
+                      marginBottom: 20,
+                    ),
+                    MyText(
+                      text: 'Upload an identity document (Id card / Passeport)',
+                      weight: FontWeight.bold,
+                      paddingBottom: 20,
+                    ),
+                    AnimatedRow(children: [
+                      Expanded(
+                          child: UploadTile(
+                        title: 'Upload Front',
+                        size: 10,
+                        height: 23,
+                        color: kGrey5Color,
+                      )),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                          child: UploadTile(
+                        color: kGrey5Color,
+                        title: 'Upload Back',
+                        size: 10,
+                        height: 23,
+                      )),
+                    ]),
+                    SizedBox(
+                      height: 30,
                     ),
                     MyButton(
                         onTap: () {

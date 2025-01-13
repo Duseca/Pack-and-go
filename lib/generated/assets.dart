@@ -106,6 +106,10 @@ class Assets {
   /// assets/images/celtiis.png
   static const String imagesCeltiis = "assets/images/celtiis.png";
 
+  /// Assets for imagesChat
+  /// assets/images/chat.png
+  static const String imagesChat = "assets/images/chat.png";
+
   /// Assets for imagesCloud
   /// assets/images/cloud.png
   static const String imagesCloud = "assets/images/cloud.png";
@@ -122,6 +126,10 @@ class Assets {
   /// assets/images/date.png
   static const String imagesDate = "assets/images/date.png";
 
+  /// Assets for imagesDone
+  /// assets/images/done.png
+  static const String imagesDone = "assets/images/done.png";
+
   /// Assets for imagesDoubletick
   /// assets/images/doubletick.png
   static const String imagesDoubletick = "assets/images/doubletick.png";
@@ -133,6 +141,18 @@ class Assets {
   /// Assets for imagesFilter
   /// assets/images/filter.png
   static const String imagesFilter = "assets/images/filter.png";
+
+  /// Assets for imagesFlag
+  /// assets/images/flag.png
+  static const String imagesFlag = "assets/images/flag.png";
+
+  /// Assets for imagesGifbgtrans
+  /// assets/images/gifbgtrans.gif
+  static const String imagesGifbgtrans = "assets/images/gifbgtrans.gif";
+
+  /// Assets for imagesHelp
+  /// assets/images/help.png
+  static const String imagesHelp = "assets/images/help.png";
 
   /// Assets for imagesHistory
   /// assets/images/history.png
@@ -202,6 +222,10 @@ class Assets {
   /// assets/images/online.png
   static const String imagesOnline = "assets/images/online.png";
 
+  /// Assets for imagesPHONE1
+  /// assets/images/PHONE1.png
+  static const String imagesPHONE1 = "assets/images/PHONE1.png";
+
   /// Assets for imagesPackege
   /// assets/images/packege.png
   static const String imagesPackege = "assets/images/packege.png";
@@ -209,6 +233,14 @@ class Assets {
   /// Assets for imagesPhone
   /// assets/images/phone.png
   static const String imagesPhone = "assets/images/phone.png";
+
+  /// Assets for imagesPhone2
+  /// assets/images/phone2.png
+  static const String imagesPhone2 = "assets/images/phone2.png";
+
+  /// Assets for imagesPhone3
+  /// assets/images/phone3.png
+  static const String imagesPhone3 = "assets/images/phone3.png";
 
   /// Assets for imagesProfile
   /// assets/images/profile.png
@@ -233,6 +265,10 @@ class Assets {
   /// Assets for imagesRight
   /// assets/images/right.png
   static const String imagesRight = "assets/images/right.png";
+
+  /// Assets for imagesRight2
+  /// assets/images/right2.png
+  static const String imagesRight2 = "assets/images/right2.png";
 
   /// Assets for imagesSearch
   /// assets/images/search.png
@@ -261,6 +297,14 @@ class Assets {
   /// Assets for imagesSuccess
   /// assets/images/success.png
   static const String imagesSuccess = "assets/images/success.png";
+
+  /// Assets for imagesSuccess2
+  /// assets/images/success2.png
+  static const String imagesSuccess2 = "assets/images/success2.png";
+
+  /// Assets for imagesTick
+  /// assets/images/tick.png
+  static const String imagesTick = "assets/images/tick.png";
 
   /// Assets for imagesTime
   /// assets/images/time.png

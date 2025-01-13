@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
+import 'package:get/get.dart';
 import 'package:pack_and_go/constants/app_colors.dart';
 import 'package:pack_and_go/constants/app_styling.dart';
 import 'package:pack_and_go/generated/assets.dart';
+import 'package:pack_and_go/view/screens/profile/change_password.dart';
+import 'package:pack_and_go/view/screens/profile/edit_profile.dart';
+import 'package:pack_and_go/view/screens/profile/language.dart';
+import 'package:pack_and_go/view/screens/profile/notifications_settings.dart';
 import 'package:pack_and_go/view/widgets/Icon_title_subtitle.dart';
 import 'package:pack_and_go/view/widgets/common_image_view_widget.dart';
 import 'package:pack_and_go/view/widgets/my_text_widget.dart';
@@ -178,19 +183,27 @@ class MenuItem {
 final menuItems = [
   MenuItem(
     title: 'Edit Profile',
-    onTap: () {},
+    onTap: () {
+      Get.to(() => EditProfile());
+    },
   ),
   MenuItem(
     title: 'Language',
-    onTap: () {},
+    onTap: () {
+      Get.to(() => Language());
+    },
   ),
   MenuItem(
     title: 'Change Password',
-    onTap: () {},
+    onTap: () {
+      Get.to(() => ChangePassword());
+    },
   ),
   MenuItem(
     title: 'Notifications Settings',
-    onTap: () {},
+    onTap: () {
+      Get.to(() => NotificationsSettings());
+    },
   ),
   MenuItem(
     title: 'Terms and Conditions',

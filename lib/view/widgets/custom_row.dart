@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pack_and_go/constants/app_colors.dart';
 import 'package:pack_and_go/view/widgets/common_image_view_widget.dart';
+import 'package:pack_and_go/view/widgets/custom_animated_row.dart';
 import 'package:pack_and_go/view/widgets/my_text_widget.dart';
 
 class CustomRow extends StatelessWidget {
@@ -26,7 +27,7 @@ class CustomRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 2.0),
-      child: Row(
+      child: AnimatedRow(
         children: [
           Expanded(
             child: MyText(

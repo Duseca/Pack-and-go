@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:pack_and_go/constants/app_fonts.dart';
 import 'package:pack_and_go/generated/assets.dart';
 import 'package:pack_and_go/view/screens/auth/login.dart';
+import 'package:pack_and_go/view/screens/onboarding/onboarding_landing.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -27,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen>
     );
     // Start the animation and navigate to SignUpDealer after completion
     _animationController.forward().then((_) {
-      Get.offAll(() => Login(),
+      Get.offAll(() => OnboardingLanding(),
           transition: Transition.fadeIn, duration: const Duration(seconds: 3));
     });
   }

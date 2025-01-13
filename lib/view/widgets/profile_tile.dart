@@ -7,8 +7,8 @@ import 'package:pack_and_go/view/widgets/icon_text_row.dart';
 import 'package:pack_and_go/view/widgets/my_text_widget.dart';
 
 class ProfileTile extends StatelessWidget {
-  const ProfileTile({super.key});
-
+  const ProfileTile({super.key, this.trailingpath});
+  final String? trailingpath;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -45,7 +45,7 @@ class ProfileTile extends StatelessWidget {
             ScaleEffect()
           ],
           child: CommonImageView(
-            imagePath: Assets.imagesBadge,
+            imagePath: trailingpath ?? Assets.imagesBadge,
             height: 50,
           ),
         )
