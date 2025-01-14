@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:pack_and_go/config/routes/routes.dart';
 import 'package:pack_and_go/config/theme/light_theme.dart';
+import 'package:pack_and_go/localization/languages/languages.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,6 +26,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       debugShowMaterialGrid: false,
+      translations: Languages(),
+      locale: Get.locale, // Ensure it's set correctly here
+      fallbackLocale:
+          Locale('es', 'ES'), // Fallback to Spanish if locale not set
       title: 'PACK AND GO',
       theme: lightTheme,
       themeMode: ThemeMode.light,

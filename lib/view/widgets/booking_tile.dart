@@ -78,7 +78,7 @@ class BookingTile extends StatelessWidget {
                       () {
                         Get.to(() => ProfileDetails());
                       },
-                  buttonText: '    See Details    ',
+                  buttonText: 'See Details',
                   height: 36,
                   fontSize: 12,
                 ),

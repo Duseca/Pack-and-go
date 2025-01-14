@@ -182,39 +182,39 @@ class MenuItem {
 
 final menuItems = [
   MenuItem(
-    title: 'Edit Profile',
+    title: 'Edit Profile'.tr,
     onTap: () {
       Get.to(() => EditProfile());
     },
   ),
   MenuItem(
-    title: 'Language',
+    title: 'Language'.tr,
     onTap: () {
-      Get.to(() => Language());
+      Get.to(() => ProfileLanguage());
     },
   ),
   MenuItem(
-    title: 'Change Password',
+    title: 'Change Password'.tr,
     onTap: () {
       Get.to(() => ChangePassword());
     },
   ),
   MenuItem(
-    title: 'Notifications Settings',
+    title: 'Notifications Settings'.tr,
     onTap: () {
       Get.to(() => NotificationsSettings());
     },
   ),
   MenuItem(
-    title: 'Terms and Conditions',
+    title: 'Terms and Conditions'.tr,
     onTap: () {},
   ),
   MenuItem(
-    title: 'Privacy Policy',
+    title: 'Privacy Policy'.tr,
     onTap: () {},
   ),
   MenuItem(
-    title: 'Log Out',
+    title: 'Log Out'.tr,
     onTap: () {},
   ),
 ];

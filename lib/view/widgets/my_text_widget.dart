@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:get/get.dart';
+import 'package:pack_and_go/config/routes/routes.dart';
 
 import '../../constants/app_colors.dart';
 import '../../constants/app_fonts.dart';
@@ -62,7 +64,7 @@ class MyText extends StatelessWidget {
         child: GestureDetector(
           onTap: onTap,
           child: Text(
-            "$text",
+            "$text".tr,
             style: TextStyle(
               shadows: shadow,
               fontSize: size ?? 14,
