@@ -35,26 +35,26 @@ class _BottomNavBarState extends State<BottomNavBar> {
         'image': currentIndex == 0
             ? Assets.imagesSearch
             : Assets.imagesSearchunselected,
-        'label': 'Search',
+        'label': 'Search'.tr,
       },
       {
         'image': currentIndex == 1 ? Assets.imagesAddgrad : Assets.imagesAdd,
-        'label': 'Publish',
+        'label': 'Publish'.tr,
       },
       {
         'image':
             currentIndex == 2 ? Assets.imagesInboxgrad : Assets.imagesInbox,
-        'label': 'Inbox',
+        'label': 'Inbox'.tr,
       },
       {
         'image':
             currentIndex == 3 ? Assets.imagesHistorygrad : Assets.imagesHistory,
-        'label': 'History',
+        'label': 'History'.tr,
       },
       {
         'image':
             currentIndex == 4 ? Assets.imagesProfilegrad : Assets.imagesProfile,
-        'label': 'Profile',
+        'label': 'Profile'.tr,
       },
     ];
   }
@@ -102,9 +102,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
           unselectedFontSize: 10,
           selectedLabelStyle: TextStyle(
             fontFamily: AppFonts.URBANIST,
+            locale: Get.locale,
             color: kSecondaryColor,
           ),
           unselectedLabelStyle: TextStyle(
+            locale: Get.locale,
             fontFamily: AppFonts.URBANIST,
             color: kGrey8Color,
           ),

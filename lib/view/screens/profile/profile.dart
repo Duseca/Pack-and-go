@@ -9,6 +9,7 @@ import 'package:pack_and_go/view/screens/profile/change_password.dart';
 import 'package:pack_and_go/view/screens/profile/edit_profile.dart';
 import 'package:pack_and_go/view/screens/profile/language.dart';
 import 'package:pack_and_go/view/screens/profile/notifications_settings.dart';
+import 'package:pack_and_go/view/screens/profile/privacy_policy.dart';
 import 'package:pack_and_go/view/widgets/Icon_title_subtitle.dart';
 import 'package:pack_and_go/view/widgets/common_image_view_widget.dart';
 import 'package:pack_and_go/view/widgets/my_text_widget.dart';
@@ -184,7 +185,7 @@ final menuItems = [
   MenuItem(
     title: 'Edit Profile'.tr,
     onTap: () {
-      Get.to(() => EditProfile());
+      //   Get.to(() => EditProfile());
     },
   ),
   MenuItem(
@@ -211,7 +212,9 @@ final menuItems = [
   ),
   MenuItem(
     title: 'Privacy Policy'.tr,
-    onTap: () {},
+    onTap: () {
+      Get.to(() => PrivacyPolicy());
+    },
   ),
   MenuItem(
     title: 'Log Out'.tr,

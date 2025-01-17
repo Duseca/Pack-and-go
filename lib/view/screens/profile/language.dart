@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bounce/flutter_bounce.dart';
 import 'package:get/get.dart';
 import 'package:pack_and_go/constants/app_colors.dart';
+import 'package:pack_and_go/constants/app_styling.dart';
 import 'package:pack_and_go/generated/assets.dart';
+import 'package:pack_and_go/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:pack_and_go/view/widgets/my_button.dart';
 import 'package:pack_and_go/view/widgets/my_text_widget.dart';
+import 'package:pack_and_go/view/widgets/simple_app_bar.dart';
+import 'package:pack_and_go/view/widgets/two_text_column.dart';
 
 class ProfileLanguage extends StatefulWidget {
   const ProfileLanguage({super.key});
@@ -34,30 +39,18 @@ class _ProfileLanguageState extends State<ProfileLanguage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          simpleAppBar2(title: 'Language'),
           Expanded(
             child: ListView(
               shrinkWrap: true,
               padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
               physics: const BouncingScrollPhysics(),
               children: [
-                Row(
-                  children: [
-                    MyText(
-                      text: 'Choose Your Language',
-                      size: 22,
-                      weight: FontWeight.w600,
-                      color: kSecondaryColor,
-                      paddingRight: 8,
-                    ),
-                  ],
-                ),
-                MyText(
-                  paddingTop: 4,
-                  text: 'Please search and then choose your personal language.',
-                  size: 16,
-                  weight: FontWeight.w400,
-                  color: kSecondaryColor,
-                  paddingBottom: 15,
+                TwoTextedColumn(
+                  text1: 'Language',
+                  text2:
+                      'Lorem ipsum dolor sit amet consectetur. Sit porttitor lacus cras neque congue mi viverra justo congue.',
+                  size1: 18,
                 ),
                 language_row(
                   title: 'English',
@@ -91,7 +84,7 @@ class _ProfileLanguageState extends State<ProfileLanguage> {
             mBottom: 60,
             buttonText: 'Done',
             onTap: () {
-              Get.back();
+              Get.offAll(() => BottomNavBar());
             },
           ),
         ],
@@ -102,7 +95,7 @@ class _ProfileLanguageState extends State<ProfileLanguage> {
 
 class language_row extends StatefulWidget {
   final String? title, flag;
-  final VoidCallback? ontap;
+  final void Function()? ontap;
   final bool? isSelected;
   const language_row({
     super.key,
@@ -118,24 +111,20 @@ class language_row extends StatefulWidget {
 class _language_rowState extends State<language_row> {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: widget.ontap,
+    return Bounce(
+      duration: Duration(milliseconds: 300),
+      onPressed: widget.ontap ?? () {},
       child: Container(
         decoration: BoxDecoration(
-            color: widget.isSelected == true ? kSecondaryColor : ktransparent,
+            color: kPrimaryColor,
             borderRadius: BorderRadius.circular(10),
             border: Border.all(
                 color: widget.isSelected == true
-                    ? kSecondaryColor.withOpacity(0.2)
+                    ? kSecondaryColor
                     : ktransparent)),
         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 9),
         child: Row(
           children: [
-            Image.asset(
-              widget.flag ?? Assets.imagesFlag,
-              width: 28,
-              height: 25,
-            ),
             Expanded(
               child: MyText(
                 text: widget.title ?? 'English',
@@ -144,15 +133,29 @@ class _language_rowState extends State<language_row> {
                 color: kSecondaryColor,
               ),
             ),
-            if (widget.isSelected == true)
-              Padding(
-                padding: const EdgeInsets.only(right: 5.0),
-                child: Icon(
-                  Icons.check,
-                  color: kSecondaryColor,
-                  size: 18,
-                ),
+            AnimatedContainer(
+              duration: Duration(
+                milliseconds: 230,
               ),
+              curve: Curves.easeInOut,
+              height: 21,
+              width: 21,
+              decoration: circle(ktransparent, kGrey2Color),
+              child: AnimatedContainer(
+                duration: Duration(milliseconds: 500),
+                margin: EdgeInsets.all(3),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: widget.isSelected == true
+                        ? kSecondaryColor
+                        : ktransparent,
+                    border: Border.all(
+                        color: widget.isSelected == true
+                            ? kPrimaryColor
+                            : kGrey2Color,
+                        width: 0)),
+              ),
+            ),
           ],
         ),
       ),
